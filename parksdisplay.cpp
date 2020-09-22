@@ -48,24 +48,7 @@ ParksDisplay::~ParksDisplay()
 
 void ParksDisplay::on_nameButton_clicked()
 {
-    QSqlQuery query;
-    query.prepare("SELECT * FROM customers ORDER BY state");
-    // If the customers could not be loaded onto the parks list
-    if (!query.exec()) {
-      // Error message
-      qDebug() << "Failed to query parks: " << query.lastError().text();
-      return;
-    }
 
-
-        QString parkName = query.value(0).toString();
-        QString state = query.value(1).toString();
-        QString visitors = query.value(2).toString();
-        QString acres = query.value(3).toString();
-
-        QSqlQueryModel *search = new QSqlTableModel;
-        search->setQuery(query);
-        ui->tableView->setModel(search);
 }
 
 void ParksDisplay::on_resetButton_clicked()
