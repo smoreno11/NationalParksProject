@@ -34,3 +34,8 @@ void AdminLogin::on_loginButton_clicked()
       QMessageBox::warning(this, "Login", "Username and Password are incorrect");
     }
 }
+
+void AdminLogin::on_cancelButton_clicked()
+{
+
+}
