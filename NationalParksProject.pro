@@ -14,6 +14,7 @@ SOURCES += \
     adminscreen.cpp \
     customer.cpp \
     databasesetup.cpp \
+    helpdialog.cpp \
     main.cpp \
     mainwindow.cpp \
     nationalparks.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
     adminscreen.h \
     customer.h \
     databasesetup.h \
+    helpdialog.h \
     mainwindow.h \
     nationalparks.h \
     parkdisplay.h \
@@ -35,6 +37,7 @@ HEADERS += \
 FORMS += \
     adminlogin.ui \
     adminscreen.ui \
+    helpdialog.ui \
     mainwindow.ui \
     parkdisplay.ui \
     parksdisplay.ui

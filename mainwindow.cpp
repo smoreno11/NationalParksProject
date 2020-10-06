@@ -4,6 +4,7 @@
 #include "customer.h"
 #include "adminlogin.h"
 #include "parksdisplay.h"
+#include "helpdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,20 +29,18 @@ void MainWindow::on_parkDisplay_clicked()
 
 }
 
-
-//      NationalParks customer(query);
-//      QListWidgetItem *item = new QListWidgetItem;
-//     QListWidgetItem *items = new QListWidgetItem;
-//      item->setText(customer.getNationalPark());
-//      item->setData(Qt::UserRole, customer.getId());
-
-//      ui->CustomerListWidget->addItem(item);
-//      ui->CustomerListWidget->addItem(items);
-
 void MainWindow::on_pushButton_clicked()
 {
     AdminLogin go;
 
     go.setModal(true);
     go.exec();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    helpDialog hDialog;
+
+    hDialog.setModal(true);
+    hDialog.exec();
 }
