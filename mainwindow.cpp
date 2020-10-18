@@ -4,6 +4,7 @@
 #include "customer.h"
 #include "adminlogin.h"
 #include "parksdisplay.h"
+#include "helpdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -35,4 +36,12 @@ void MainWindow::on_pushButton_clicked()
 
     go.setModal(true);
     go.exec();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    helpDialog hDialog;
+
+    hDialog.setModal(true);
+    hDialog.exec();
 }
