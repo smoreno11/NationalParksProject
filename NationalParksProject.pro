@@ -19,7 +19,9 @@ SOURCES += \
     mainwindow.cpp \
     nationalparks.cpp \
     parks.cpp \
-    parksdisplay.cpp
+    parksdisplay.cpp \
+    totalacres.cpp \
+    totalvisitors.cpp
 
 HEADERS += \
     adminlogin.h \
@@ -30,14 +32,16 @@ HEADERS += \
     mainwindow.h \
     nationalparks.h \
     parks.h \
-    parksdisplay.h
+    parksdisplay.h \
+    totalacres.h \
+    totalvisitors.h
 
 FORMS += \
     adminlogin.ui \
     adminscreen.ui \
     helpdialog.ui \
     mainwindow.ui \
-    parksdisplay.ui
+6
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
