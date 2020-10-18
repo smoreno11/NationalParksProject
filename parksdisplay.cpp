@@ -36,6 +36,7 @@ ParksDisplay::~ParksDisplay()
 
 void ParksDisplay::on_nameButton_clicked()
 {
+
     QSqlQuery query;
     //SELECT park_name, state, visitor, acres FROM customers
     query.prepare("SELECT park_name, state, visitor, acres FROM customers ORDER BY state");
@@ -55,6 +56,7 @@ void ParksDisplay::on_nameButton_clicked()
         QSqlQueryModel *search = new QSqlTableModel;
         search->setQuery(query);
         ui->tableView->setModel(search);
+
 }
 
 void ParksDisplay::on_resetButton_clicked()
