@@ -68,21 +68,6 @@ bool NationalParks::save() {
     return false;
   }
 
-  // if the NationalParks is in the database, we want to update the NationalParks not
-  // insert it
-//  if (id != -1) {
-//    query.prepare("UPDATE parks "
-//                  "SET park_name=?, state_location=?, number_visitors=?,"
-//                  " acres=? "
-//                  "WHERE id=?");
-//    query.bindValue(4, id);
-//  } else {
-//    query.prepare(
-//        "INSERT INTO parks "
-//        "(park_name, state_location, number_visitors,"
-//        " acres)"
-//        "VALUES (?, ?, ?, ?)");
-//  }
 
   query.addBindValue(parkName);
   query.addBindValue(state);

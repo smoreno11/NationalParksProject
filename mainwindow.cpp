@@ -29,15 +29,6 @@ void MainWindow::on_parkDisplay_clicked()
 }
 
 
-//      NationalParks customer(query);
-//      QListWidgetItem *item = new QListWidgetItem;
-//     QListWidgetItem *items = new QListWidgetItem;
-//      item->setText(customer.getNationalPark());
-//      item->setData(Qt::UserRole, customer.getId());
-
-//      ui->CustomerListWidget->addItem(item);
-//      ui->CustomerListWidget->addItem(items);
-
 void MainWindow::on_pushButton_clicked()
 {
     AdminLogin go;

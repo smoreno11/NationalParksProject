@@ -25,8 +25,7 @@ void AdminLogin::on_loginButton_clicked()
       AdminScreen go;
       go.setModal(true);
       go.exec();
-//      customerpage.setModal(true);
-//      customerpage.exec();
+
     }
     // If username and password do not match Admin login
     else {

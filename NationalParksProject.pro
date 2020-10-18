@@ -17,7 +17,6 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     nationalparks.cpp \
-    parkdisplay.cpp \
     parks.cpp \
     parksdisplay.cpp
 
@@ -28,7 +27,6 @@ HEADERS += \
     databasesetup.h \
     mainwindow.h \
     nationalparks.h \
-    parkdisplay.h \
     parks.h \
     parksdisplay.h
 
@@ -36,7 +34,6 @@ FORMS += \
     adminlogin.ui \
     adminscreen.ui \
     mainwindow.ui \
-    parkdisplay.ui \
     parksdisplay.ui
 
 # Default rules for deployment.

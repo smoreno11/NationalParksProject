@@ -26,6 +26,8 @@ private slots:
 
     void on_resetButton_clicked();
 
+    void on_parkNameButton_clicked();
+
 private:
     Ui::ParksDisplay *ui;
 };

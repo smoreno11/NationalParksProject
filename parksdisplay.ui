@@ -49,6 +49,19 @@
     <string>Sort by State</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="parkNameButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>70</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by Name</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
