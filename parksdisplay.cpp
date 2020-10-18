@@ -1,5 +1,7 @@
 #include "parksdisplay.h"
 #include "ui_parksdisplay.h"
+#include "totalvisitors.h"
+#include "totalacres.h"
 
 ParksDisplay::ParksDisplay(QWidget *parent) :
     QDialog(parent),
@@ -70,4 +72,19 @@ void ParksDisplay::on_resetButton_clicked()
         QSqlQueryModel *search = new QSqlTableModel;
         search->setQuery(query);
         ui->tableView->setModel(search);
+}
+
+void ParksDisplay::on_pushButton_clicked()
+{
+    totalVisitors totalVis;
+    totalVis.setModal(true);
+    totalVis.exec();
+
+}
+
+void ParksDisplay::on_pushButton_2_clicked()
+{
+    totalAcres totalAcr;
+    totalAcr.setModal(true);
+    totalAcr.exec();
 }
