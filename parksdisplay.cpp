@@ -19,23 +19,10 @@ ParksDisplay::ParksDisplay(QWidget *parent) :
           qDebug() << "Failed to query parks: " << query.lastError().text();
           return;
         }
-
-//        while(query.next())
-//        {
-//            //QString id = query.value(0).toString();
             QString parkName = query.value(0).toString();
             QString state = query.value(1).toString();
             QString visitors = query.value(2).toString();
             QString acres = query.value(3).toString();
-
-
-
-//            QString size = query.value(3).toString();
-
-//            QSqlQueryModel *search = new QSqlTableModel;
-//            search->setQuery(query);
-//            ui->tableView->setModel(search);
-//        }
 
             QSqlQueryModel *search = new QSqlTableModel;
             search->setQuery(query);
@@ -50,7 +37,25 @@ ParksDisplay::~ParksDisplay()
 
 void ParksDisplay::on_nameButton_clicked()
 {
-   
+    QSqlQuery query;
+        //SELECT park_name, state, visitor, acres FROM customers
+        query.prepare("SELECT park_name, state, visitor, acres FROM customers ORDER BY state");
+        // If the customers could not be loaded onto the parks list
+        if (!query.exec()) {
+          // Error message
+          qDebug() << "Failed to query parks: " << query.lastError().text();
+          return;
+        }
+
+
+            QString parkName = query.value(0).toString();
+            QString state = query.value(1).toString();
+            QString visitors = query.value(2).toString();
+            QString acres = query.value(3).toString();
+
+            QSqlQueryModel *search = new QSqlTableModel;
+            search->setQuery(query);
+            ui->tableView->setModel(search);
 }
 
 void ParksDisplay::on_resetButton_clicked()
@@ -87,4 +92,27 @@ void ParksDisplay::on_pushButton_2_clicked()
     totalAcres totalAcr;
     totalAcr.setModal(true);
     totalAcr.exec();
+}
+
+void ParksDisplay::on_parkNameButton_clicked()
+{
+    QSqlQuery query;
+        //SELECT park_name, state, visitor, acres FROM customers
+        query.prepare("SELECT park_name, state, visitor, acres FROM customers ORDER BY park_name");
+        // If the customers could not be loaded onto the parks list
+        if (!query.exec()) {
+
+          qDebug() << "Failed to query parks: " << query.lastError().text();
+          return;
+        }
+
+
+            QString parkName = query.value(0).toString();
+            QString state = query.value(1).toString();
+            QString visitors = query.value(2).toString();
+            QString acres = query.value(3).toString();
+
+            QSqlQueryModel *search = new QSqlTableModel;
+            search->setQuery(query);
+            ui->tableView->setModel(search);
 }

@@ -18,7 +18,6 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     nationalparks.cpp \
-    parkdisplay.cpp \
     parks.cpp \
     parksdisplay.cpp \
     totalacres.cpp \
@@ -32,7 +31,6 @@ HEADERS += \
     helpdialog.h \
     mainwindow.h \
     nationalparks.h \
-    parkdisplay.h \
     parks.h \
     parksdisplay.h \
     totalacres.h \
@@ -43,7 +41,6 @@ FORMS += \
     adminscreen.ui \
     helpdialog.ui \
     mainwindow.ui \
-    parkdisplay.ui \
     parksdisplay.ui \
     totalacres.ui \
     totalvisitors.ui

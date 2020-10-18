@@ -30,6 +30,8 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_parkNameButton_clicked();
+
 private:
     Ui::ParksDisplay *ui;
 };
