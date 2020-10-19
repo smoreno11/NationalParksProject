@@ -116,3 +116,49 @@ void ParksDisplay::on_parkNameButton_clicked()
             search->setQuery(query);
             ui->tableView->setModel(search);
 }
+
+void ParksDisplay::on_areaButton_clicked()
+{
+    QSqlQuery query;
+        //SELECT park_name, state, visitor, acres FROM customers
+        query.prepare("SELECT park_name, state, visitor, acres FROM customers ORDER BY acres");
+        // If the customers could not be loaded onto the parks list
+        if (!query.exec()) {
+
+          qDebug() << "Failed to query parks: " << query.lastError().text();
+          return;
+        }
+
+
+            QString parkName = query.value(0).toString();
+            QString state = query.value(1).toString();
+            QString visitors = query.value(2).toString();
+            QString acres = query.value(3).toString();
+
+            QSqlQueryModel *search = new QSqlTableModel;
+            search->setQuery(query);
+            ui->tableView->setModel(search);
+}
+
+void ParksDisplay::on_visitorsButton_clicked()
+{
+    QSqlQuery query;
+        //SELECT park_name, state, visitor, acres FROM customers
+        query.prepare("SELECT park_name, state, visitor, acres FROM customers ORDER BY visitor");
+        // If the customers could not be loaded onto the parks list
+        if (!query.exec()) {
+
+          qDebug() << "Failed to query parks: " << query.lastError().text();
+          return;
+        }
+
+
+            QString parkName = query.value(0).toString();
+            QString state = query.value(1).toString();
+            QString visitors = query.value(2).toString();
+            QString acres = query.value(3).toString();
+
+            QSqlQueryModel *search = new QSqlTableModel;
+            search->setQuery(query);
+            ui->tableView->setModel(search);
+}
