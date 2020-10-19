@@ -20,7 +20,12 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    
+    // Default Constructer: initializing the parameters
+    // parameters: *parnet - QWidget
     MainWindow(QWidget *parent = nullptr);
+    
+    // Destructor
     ~MainWindow();
 
 private slots:
