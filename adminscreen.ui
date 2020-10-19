@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>AdminScreen</class>
- <widget name="AdminScreen" class="QDialog">
+ <widget class="QDialog" name="AdminScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,6 +13,32 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPushButton" name="editContactInfo">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>170</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit Contact Info</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addPark">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>70</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Park</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
