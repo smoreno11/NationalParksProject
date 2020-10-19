@@ -26,7 +26,8 @@ private slots:
 
     void on_resetButton_clicked();
 
-
+    void on_SortByArea_clicked();
+    void on_SortByV_clicked();
     void on_parkNameButton_clicked();
 
     void on_pushButton_clicked();
