@@ -21,14 +21,12 @@ public:
   ~Parks();
 
   /**
-   * Create a Parks from an SQL query result. Before calling this
-   * contructor, you must query for the testimoncial. This will only extract the
-   * necessary data for the testimoncial from the query object.
+   * Create a Parks from an SQL query result.
    *
    * Usage (untested):
    * @code{.cpp}
    * QSqlQuery query;
-   * query.exec("SELECT * FROM testimoncial");
+   * query.exec("SELECT * FROM parks");
    * Customer testimoncial(query);
    * @endcode
    *
