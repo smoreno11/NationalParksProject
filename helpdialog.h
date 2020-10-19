@@ -12,11 +12,7 @@ class helpDialog : public QDialog
     Q_OBJECT
 
 public:
-
-    // default constructer: setting up the help button for the costumer
     explicit helpDialog(QWidget *parent = nullptr);
-    
-    // default destructor
     ~helpDialog();
 
 private:

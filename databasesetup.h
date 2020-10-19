@@ -8,10 +8,7 @@
 
 const int SEED_CUSTOMER_COUNT = 11;
 
-
-
-// Initializes the park's objects and sets the input data
-
+// Original data for customer list
 const Customer SEED_CUSTOMERS[SEED_CUSTOMER_COUNT] = {
     Customer("Acadia", "Maine", 3437286,49076.63),
     Customer("Badlands", "South Dakota", 970998, 242755.94),
@@ -26,15 +23,6 @@ const Customer SEED_CUSTOMERS[SEED_CUSTOMER_COUNT] = {
     Customer("Zion", "Utah", 4488268, 147242.66)};
 
 
-
-
-/****************************************************************
- * setupDB
- *   This function creates the main table and sets up all the 
- *   park's information in the table. Additionally, it checks
- *   if the table has been executed for the costumer. 
- *       - returns  nothing  This will outputs a table of infos.
- ***************************************************************/
-
 void setupDB();
+void addDBEntry();
 #endif // DATABASESETUP_H

@@ -1,13 +1,10 @@
 #include "databasesetup.h"
 #include "nationalparks.h"
+#include <QTextStream>
+#include <iostream>
 
-/**********************************************************
- * Functions - setupDB
- * _________________________________________________________
- * This function creates a detailed table to set the park's 
- * inforamtion such as ID, Name, State, number of visitors, 
- * and the area. The table will be displayed to the costumer
- ************************************************************/ 
+
+// Set up database for parks info
 void setupDB() {
   QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
   db.setDatabaseName("storage.db");
@@ -31,11 +28,10 @@ void setupDB() {
 
   // If we get a result then we know the parks table exists
   if (query.next()) {
-    qDebug() << "Database already setup";
+    qDebug() << "Database already setup.";
     return;
   }
 
-  // setting up the table with all the information
   query.prepare(
       "CREATE TABLE customers ("
       "  id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -59,6 +55,5 @@ void setupDB() {
   }
 
 
-  qDebug() << "Set up database";
+  qDebug() << "Set up database.";
 }
-

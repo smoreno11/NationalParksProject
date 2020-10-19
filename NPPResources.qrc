@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Images/Artboard_73-512.png</file>
+        <file>Images/circle-things-31-512.png</file>
+        <file>Images/Copy.png</file>
+        <file>Images/Cut.png</file>
+        <file>Images/folder_open.png</file>
+        <file>Images/Paste.png</file>
+        <file>Images/redo-57-740569.png</file>
+        <file>Images/save-as-icon-9.png</file>
+        <file>Images/undo+icon-1320085939108537891.png</file>
+    </qresource>
+</RCC>

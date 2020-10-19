@@ -2,8 +2,7 @@
 
 
 // Customer constructor
-Customer::Customer(const Customer &customer) // IN - customer object
-{
+Customer::Customer(const Customer &customer) {
   id = customer.id;
   parkName = customer.parkName;
   state = customer.state;
@@ -12,7 +11,7 @@ Customer::Customer(const Customer &customer) // IN - customer object
 
 }
 
-// Default constructor - srtting all members to empty values
+// Default constructor
 Customer::Customer() {
   id = -1;
   parkName = "";
@@ -22,16 +21,12 @@ Customer::Customer() {
 }
 
 // Customer info constructor
-Customer::Customer(QString parkName, // IN - Parks name 
-                   QString state, // IN - state
-                   int visitors, // IN - the number of visitors 
-                   double size) // IN - the area of the park
+Customer::Customer(QString parkName, QString state, int visitors, double size)
     : parkName(parkName), state(state), visitors(visitors), size(size) {
   id = -1;
 }
 
-Customer::Customer(QSqlQuery &query) // IN - SQL object
-{
+Customer::Customer(QSqlQuery &query) {
   QString interestStr;
 
   id = query.value(0).toInt();
@@ -44,8 +39,6 @@ Customer::Customer(QSqlQuery &query) // IN - SQL object
 // Destructor
 Customer::~Customer() {}
 
-// save() - checks if the SQL and the database works and executes perfectly 
-// returns true if the query is successfuly set up                
 bool Customer::save() {
   QSqlQuery query;
 
@@ -98,47 +91,32 @@ bool Customer::save() {
   id = query.lastInsertId().toInt();
   return true;
 }
-//setId() - sets the parks ID                
-void Customer::setId(int newId) // IN - setting the new ID
+
+void Customer::setId(int newId)
 {
     id = newId;
 }
 
-//setParkName() - sets the park's name 
-void Customer::setParkName(QString newParkName) // IN - setting the park name
-                   {
+void Customer::setParkName(QString newParkName) {
   parkName = newParkName;
 }
-//setState() - sets the park's ID                   
-void Customer::setState(QString newState) // IN - setting the park's state
-              {
+void Customer::setState(QString newState) {
   state = newState;
 }
 
-//setVisitors() - sets the park's number of visitors                        
-void Customer::setVisitors(int newVisitors)// IN - setting the park's number of visitors
+void Customer::setVisitors(int newVisitors)
 {
     visitors = newVisitors;
 }
 
- //setSize() - sets the park's area                  
-void Customer::setSize(double newSize)// IN - setting the park's area
+void Customer::setSize(double newSize)
 {
     size = newSize;
 }
 
-// getId - returns the id 
 int Customer::getId() const { return id; }
-                   
-// getParkName - returns the park name as an string comaptible with SQL              
 QString Customer::getParkName() const { return parkName; }
-                   
-// getState - returns the state name                        
 QString Customer::getState() const { return state; }
-                   
-// getVisitors - returns the number of the visitors                      
 int Customer::getVisitors() const { return visitors; }
-                   
-// getSize - returns the area of the park                     
 double Customer::getSize() const { return size;}
 

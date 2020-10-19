@@ -12,15 +12,13 @@ class NationalParks
 {
 public:
 
-    // Deafualt constructor: Initializing all the parameters
+    // NationalParks constructor
     NationalParks();
-    NationalParks(const NationalParks &NationalParks); // IN - NationalParks Object
+    NationalParks(const NationalParks &NationalParks);
 
     // NationalParks info constructor
-    NationalParks(QString parkName,  // IN - park's name
-                  QString parkState, // IN - park's state
-                  int numVisitors,      // IN - park's number of visitors
-             double size);          // IN - park's area
+    NationalParks(QString parkName, QString parkState, int numVisitors,
+             double size);
 
     NationalParks(QSqlQuery &query);
 

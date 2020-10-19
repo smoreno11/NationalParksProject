@@ -20,6 +20,7 @@ SOURCES += \
     nationalparks.cpp \
     parks.cpp \
     parksdisplay.cpp \
+    texteditor.cpp \
     totalacres.cpp \
     totalvisitors.cpp
 
@@ -33,6 +34,7 @@ HEADERS += \
     nationalparks.h \
     parks.h \
     parksdisplay.h \
+    texteditor.h \
     totalacres.h \
     totalvisitors.h
 
@@ -41,9 +43,13 @@ FORMS += \
     adminscreen.ui \
     helpdialog.ui \
     mainwindow.ui \
-6
+6 \
+    texteditor.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    NPPResources.qrc
