@@ -1,37 +1,46 @@
 #include "parks.h"
 
-// Constructor
+// Deafualt Constructor: initializing parameters
 Parks::Parks() {
   parks = "";
   rating = -1;
 }
 
 // Destructor
-Parks::Parks(const Parks &test) {
+Parks::Parks(const Parks &test) // IN - Park's object
+{
   parks = test.parks;
   rating = test.rating;
 }
 
-Parks::Parks(QSqlQuery &query) {
+Parks::Parks(QSqlQuery &query) 
+{
   parks = query.value(1).toString();
   rating = query.value(2).toInt();
 }
 
+// getParks() - returns park objects
 QString Parks::getParks() const { return parks; }
 
+// getRating() - returns park's ratings
 int Parks::getRating() const { return rating; }
 
+// setParks() - set a park object 
 void Parks::setParks(QString newParks) {
   parks = newParks;
 }
-void Parks::setRating(int newRating) { rating = newRating; }
+// setRating - sets the rating of the park
+void Parks::setRating(int newRating) // IN - set rating
+{ rating = newRating; }
 
 Parks::Parks(QString parks, int rating)
     : parks(parks), rating(rating) {}
 
+// Destructor
 Parks::~Parks() {}
 
-// Save Parks in database
+// Parks() - Saves Parks in database, and returns 
+// true if the data is executed
 bool Parks::save() {
   QSqlQuery query;
 

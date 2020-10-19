@@ -1,8 +1,13 @@
 #include "databasesetup.h"
 #include "nationalparks.h"
 
-
-// Set up database for parks info
+/**********************************************************
+ * Functions - setupDB
+ * _________________________________________________________
+ * This function creates a detailed table to set the park's 
+ * inforamtion such as ID, Name, State, number of visitors, 
+ * and the area. The table will be displayed to the costumer
+ ************************************************************/ 
 void setupDB() {
   QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
   db.setDatabaseName("storage.db");
@@ -30,6 +35,7 @@ void setupDB() {
     return;
   }
 
+  // setting up the table with all the information
   query.prepare(
       "CREATE TABLE customers ("
       "  id INTEGER PRIMARY KEY AUTOINCREMENT,"

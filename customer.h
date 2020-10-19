@@ -18,10 +18,13 @@ public:
   Customer();
 
   // Customer constructor
-  Customer(const Customer &customer);
+  Customer(const Customer &customer); // IN  - customer object
 
   // Customer info constructor
-  Customer(QString parkName, QString state, int visitors, double size);
+  Customer(QString parkName,  // IN - park's name 
+           QString state,  // IN - park's state 
+           int visitors, // IN - park's number of visitors 
+           double size); // IN - park's area 
 
   Customer(QSqlQuery &query);
 
@@ -61,28 +64,29 @@ public:
    * @brief Set the id of the customer
    * @param newId
    */
-  void setId(int newId);
+  void setId(int newId); // IN - park's ID
 
   /**
    * @brief Set the park name
    * @param newParkName
    */
-  void setParkName(QString newParkName);
+  void setParkName(QString newParkName);  // IN - park's name
 
   /**
    * @brief Set the state
    * @param newState
    */
   void setState(QString newState);
-
+  
+  // save() - returns true if the database is succesfully executed
   bool save();
 
 private:
-  int id;
-  QString parkName;
-  QString state;
-  int visitors;
-  double size;
+  int id;       // IN - ID of the park
+  QString parkName; // IN - park's name
+  QString state;    // IN - park's state
+  int visitors;     // IN - number of visitors
+  double size;      // IN - area of the park
 
 };
 
