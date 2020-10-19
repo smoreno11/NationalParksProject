@@ -8,6 +8,7 @@
 #include <QListView>
 #include <QListWidget>
 #include <QListWidgetItem>
+#include "QSqlTableModel"
 #include "parkdisplay.h"
 
 
