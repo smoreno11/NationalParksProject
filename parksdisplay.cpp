@@ -120,3 +120,35 @@ void ParksDisplay::on_pushButton_2_clicked()
     totalAcr.exec();
 
 }
+void ParksDisplay::on_SortByV_clicked()
+{
+    QString noidea;
+       noidea.append("SELECT * FROM customers ORDER BY visitor ASC;");
+    QSqlQuery query;
+    query.prepare(noidea);
+    // If the customers could not be loaded onto the parks list
+    if (!query.exec()) {
+      // Error message
+      qDebug() << "Failed to query parks: " << query.lastError().text();
+      return;
+    }
+    QSqlQueryModel *search = new QSqlTableModel;
+    search->setQuery(query);
+    ui->tableView->setModel(search);
+}
+void ParksDisplay:: on_SortByArea_clicked()
+{
+    QString noidea;
+       noidea.append("SELECT * FROM customers ORDER BY acres ASC;");
+    QSqlQuery query;
+    query.prepare(noidea);
+    // If the customers could not be loaded onto the parks list
+    if (!query.exec()) {
+      // Error message
+      qDebug() << "Failed to query parks: " << query.lastError().text();
+      return;
+    }
+    QSqlQueryModel *search = new QSqlTableModel;
+    search->setQuery(query);
+    ui->tableView->setModel(search);
+}
