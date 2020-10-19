@@ -13,6 +13,12 @@ namespace Ui {
 class ParksDisplay;
 }
 
+/*!
+ * \brief The ParksDisplay class
+ *
+ * This class contains all of the UI buttons that
+ * are linked to display the park database.
+ */
 class ParksDisplay : public QDialog
 {
     Q_OBJECT
@@ -37,6 +43,12 @@ private slots:
     void on_visitorsButton_clicked();
 
 private:
+    /*!
+     * \brief ui
+     *
+     * Private member variable to point to
+     * the UI of the parksdisplay
+     */
     Ui::ParksDisplay *ui;
 };
 

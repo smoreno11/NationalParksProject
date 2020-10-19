@@ -6,16 +6,28 @@
 namespace Ui {
 class AdminScreen;
 }
-
+/*!
+ * \brief The AdminScreen class
+ */
 class AdminScreen : public QDialog
 {
     Q_OBJECT
 
 public:
+    /*!
+     * \brief AdminScreen
+     * \param parent
+     */
     explicit AdminScreen(QWidget *parent = nullptr);
+    /*!
+     *\brief Descructor
+     */
     ~AdminScreen();
 
 private:
+    /*!
+     * \brief ui
+     */
     Ui::AdminScreen *ui;
 };
 

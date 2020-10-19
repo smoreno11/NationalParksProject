@@ -11,6 +11,9 @@
 
 /**
  * @brief A customer Parks
+ *
+ * This class contains getters and setters than will
+ * allow the data to be inserted into the data base.
  */
 class Parks {
 public:
