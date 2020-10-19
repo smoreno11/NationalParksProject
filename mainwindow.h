@@ -20,12 +20,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    
-    // Default Constructer: initializing the parameters
-    // parameters: *parnet - QWidget
     MainWindow(QWidget *parent = nullptr);
-    
-    // Destructor
     ~MainWindow();
 
 private slots:
@@ -34,6 +29,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_contactInfo_clicked();
 
 private:
     Ui::MainWindow *ui;

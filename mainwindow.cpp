@@ -45,3 +45,20 @@ void MainWindow::on_pushButton_2_clicked()
     hDialog.setModal(true);
     hDialog.exec();
 }
+
+void MainWindow::on_contactInfo_clicked()
+{
+    QFile file("C:\\Users\\Maximillian Kalb\\Documents\\Testing\\contactInfo.txt");
+
+    if(!file.open(QFile::ReadOnly | QFile::Text))
+    {
+        qDebug() << "Could not open the file.";
+        return;
+    }
+
+    QTextStream in(&file);
+
+    ui->displayText->setText(in.readAll());
+
+    file.close();
+}
