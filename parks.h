@@ -70,7 +70,7 @@ public:
 
 private:
   QString parks; // The Parks text
-  int rating;          // Numerical rating of iRobot products
+  int rating;    // Numerical rating of iRobot products
 };
 
 

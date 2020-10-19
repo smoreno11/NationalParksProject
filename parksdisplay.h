@@ -32,6 +32,10 @@ private slots:
 
     void on_parkNameButton_clicked();
 
+    void on_areaButton_clicked();
+
+    void on_visitorsButton_clicked();
+
 private:
     Ui::ParksDisplay *ui;
 };
