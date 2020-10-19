@@ -37,7 +37,7 @@ public:
 private slots:
     /****************************************************************
      * on_nameButton_clicked ();
-     *   member; sorts by the name of the parks
+     *   member; sorts the parks by the state
      ***************************************************************/
     void on_nameButton_clicked();
     
@@ -61,19 +61,19 @@ private slots:
     
      /****************************************************************
      * on_parkNameButton_clicked ();
-     *   member; 
+     *   member; sorts by the name of the parks
      ***************************************************************/
     void on_parkNameButton_clicked();
 
     /****************************************************************
      * on_pushButton_clicked ();
-     *   member; 
+     *   member; displays the total number of visitors
      ***************************************************************/
     void on_pushButton_clicked();
 
     /****************************************************************
      * on_pushButton_2_clicked ();
-     *   member;
+     *   member; displays the total acres of the parks
      ***************************************************************/
     void on_pushButton_2_clicked();
 
