@@ -2,7 +2,8 @@
 
 
 // Customer constructor
-Customer::Customer(const Customer &customer // IN - customer object) {
+Customer::Customer(const Customer &customer) // IN - customer object
+{
   id = customer.id;
   parkName = customer.parkName;
   state = customer.state;
