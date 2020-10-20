@@ -12,6 +12,9 @@
 namespace Ui {
 class ParksDisplay;
 }
+
+
+
 /*!
  * \brief The ParksDisplay class
  *
@@ -45,11 +48,19 @@ private slots:
 
 private:
     /*!
+
     * \brief ui
     *
     * Private member variable to point to
     * the UI of the parksdisplay
     */
+
+     *\brief ui
+     *
+     * Private member variable to point to
+     * the UI of the parksdisplay
+     */
+
     Ui::ParksDisplay *ui;
     int originalVisitors;
     double originalAcres;

@@ -7,10 +7,11 @@
 #include <ios>
 #include <string>
 
-/**
- * @brief Class for individual customer
+/*!
+ * \brief Class for individual customer
  */
 class Customer {
+
 public:
 
 
@@ -23,6 +24,18 @@ public:
   * \brief Customer constructor
   * \param The customer
   */
+
+  // Default constructor
+    /*!
+   * \brief Default Constructor Customer
+   */
+  Customer();
+
+  /*!
+   * \brief Customer constructor
+   * \param The customer
+   */
+
   Customer(const Customer &customer);
 
 

@@ -6,6 +6,7 @@
 namespace Ui {
 class totalAcres;
 }
+
 /*!
  * \brief The totalAcres class
  *
@@ -19,19 +20,33 @@ class totalAcres : public QDialog
 
 public:
     /*!
+
     * \brief totalAcres
     * \param parent
     */
+
+     * \brief totalAcres
+     * \param parent
+     */
+
     explicit totalAcres(QWidget *parent = nullptr);
     ~totalAcres();
 
 private:
     /*!
+
     * \brief ui
     *
     * Private member variable to point to the UI
     * of the totalAcres class.
     */
+
+     * \brief ui
+     *
+     * Private member variable to point to the UI
+     * of the totalAcres class.
+     */
+
     Ui::totalAcres *ui;
 };
 
