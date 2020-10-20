@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-//#include "customer.h"
+#include "customer.h"
 #include "databasesetup.h"
 #include <QApplication>
 

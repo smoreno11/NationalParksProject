@@ -1,10 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "nationalparks.h"
 #include "customer.h"
 #include "adminlogin.h"
 #include "parksdisplay.h"
 #include "helpdialog.h"
+#include "contactus.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -43,4 +43,13 @@ void MainWindow::on_pushButton_2_clicked()
 
     hDialog.setModal(true);
     hDialog.exec();
+}
+
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ContactUs go;
+    go.setModal(true);
+    go.exec();
 }

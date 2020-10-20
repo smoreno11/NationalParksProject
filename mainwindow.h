@@ -9,7 +9,6 @@
 #include <QListWidget>
 #include <QListWidgetItem>
 #include "QSqlTableModel"
-#include "parkdisplay.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -30,6 +29,9 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;

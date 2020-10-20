@@ -1,9 +1,6 @@
 #ifndef DATABASESETUP_H
 #define DATABASESETUP_H
 
-
-#include "nationalparks.h"
-#include "parks.h"
 #include "customer.h"
 
 const int SEED_CUSTOMER_COUNT = 11;

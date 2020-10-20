@@ -1,4 +1,5 @@
 #include "adminlogin.h"
+#include "addpark.h"
 #include "ui_adminlogin.h"
 
 AdminLogin::AdminLogin(QWidget *parent) :
@@ -22,7 +23,7 @@ void AdminLogin::on_loginButton_clicked()
     // If username and password match Admin login
     if (username == "Admin" && password == "CPlusUs") {
       this->hide();
-      AdminScreen go;
+      addPark go;
       go.setModal(true);
       go.exec();
     }
@@ -33,7 +34,3 @@ void AdminLogin::on_loginButton_clicked()
     }
 }
 
-void AdminLogin::on_cancelButton_clicked()
-{
-
-}

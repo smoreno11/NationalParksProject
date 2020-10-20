@@ -14,18 +14,26 @@ class Customer {
 public:
 
 
-  // Default constructor
+    /*!
+    * \brief Default Constructor Customer
+    */
   Customer();
 
-  // Customer constructor
+  /*!
+  * \brief Customer constructor
+  * \param The customer
+  */
   Customer(const Customer &customer);
 
-  // Customer info constructor
+
   Customer(QString parkName, QString state, int visitors, double size);
 
   Customer(QSqlQuery &query);
 
-  // Destructor
+  /*!
+  * \brief Customer destructor
+  * \param
+  */
   ~Customer();
 
   /**
@@ -51,11 +59,8 @@ public:
 
   int getVisitors() const;
 
-  double getSize() const;
+  double getAcres() const;
 
-  void setVisitors(int newVisitors);
-
-  void setSize(double newSize);
 
   /**
    * @brief Set the id of the customer
@@ -75,6 +80,10 @@ public:
    */
   void setState(QString newState);
 
+  void setVisitors(int newVisitors);
+
+  void setAcres(double newAcres);
+
   bool save();
 
 private:
@@ -82,7 +91,7 @@ private:
   QString parkName;
   QString state;
   int visitors;
-  double size;
+  double acres;
 
 };
 

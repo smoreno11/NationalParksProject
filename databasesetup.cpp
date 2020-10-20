@@ -1,6 +1,4 @@
 #include "databasesetup.h"
-#include "nationalparks.h"
-
 
 // Set up database for parks info
 void setupDB() {

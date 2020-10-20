@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <QMessageBox>
-#include "adminscreen.h"
 #include "mainwindow.h"
 #include "customer.h"
 
@@ -22,7 +21,6 @@ public:
 private slots:
     void on_loginButton_clicked();
 
-    void on_cancelButton_clicked();
 
 private:
     Ui::AdminLogin *ui;

@@ -10,35 +10,34 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addpark.cpp \
     adminlogin.cpp \
-    adminscreen.cpp \
+    contactus.cpp \
     customer.cpp \
     databasesetup.cpp \
     helpdialog.cpp \
     main.cpp \
     mainwindow.cpp \
-    nationalparks.cpp \
-    parks.cpp \
     parksdisplay.cpp \
     totalacres.cpp \
     totalvisitors.cpp
 
 HEADERS += \
+    addpark.h \
     adminlogin.h \
-    adminscreen.h \
+    contactus.h \
     customer.h \
     databasesetup.h \
     helpdialog.h \
     mainwindow.h \
-    nationalparks.h \
-    parks.h \
     parksdisplay.h \
     totalacres.h \
     totalvisitors.h
 
 FORMS += \
+    addpark.ui \
     adminlogin.ui \
-    adminscreen.ui \
+    contactus.ui \
     helpdialog.ui \
     mainwindow.ui \
     parksdisplay.ui \

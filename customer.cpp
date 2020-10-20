@@ -7,7 +7,7 @@ Customer::Customer(const Customer &customer) {
   parkName = customer.parkName;
   state = customer.state;
   visitors = customer.visitors;
-  size = customer.size;
+  acres = customer.acres;
 
 }
 
@@ -17,12 +17,12 @@ Customer::Customer() {
   parkName = "";
   state = "";
   visitors = 0;
-  size = 0;
+  acres = 0;
 }
 
 // Customer info constructor
-Customer::Customer(QString parkName, QString state, int visitors, double size)
-    : parkName(parkName), state(state), visitors(visitors), size(size) {
+Customer::Customer(QString parkName, QString state, int visitors, double acres)
+    : parkName(parkName), state(state), visitors(visitors), acres(acres) {
   id = -1;
 }
 
@@ -32,8 +32,8 @@ Customer::Customer(QSqlQuery &query) {
   id = query.value(0).toInt();
   parkName = query.value(1).toString();
   state = query.value(2).toString();
-  visitors= query.value(3).toInt();
-  size=query.value(4).toDouble();
+  visitors = query.value(3).toInt();
+  acres =query.value(4).toDouble();
 }
 
 // Destructor
@@ -65,7 +65,7 @@ bool Customer::save() {
   // insert it
   if (id != -1) {
     query.prepare("UPDATE customers "
-                  "SET park_name=?, street_address=?"
+                  "SET park_name=?, state=?"
                   "visitors=?, acres=?"
                   "WHERE id=?");
     query.bindValue(4, id);
@@ -79,7 +79,7 @@ bool Customer::save() {
   query.addBindValue(parkName);
   query.addBindValue(state);
   query.addBindValue(visitors);
-  query.addBindValue(size);
+  query.addBindValue(acres);
 
   // If save parl did not execute
   if (!query.exec()) {
@@ -109,14 +109,14 @@ void Customer::setVisitors(int newVisitors)
     visitors = newVisitors;
 }
 
-void Customer::setSize(double newSize)
+void Customer::setAcres(double newAcres)
 {
-    size = newSize;
+    acres = newAcres;
 }
 
 int Customer::getId() const { return id; }
 QString Customer::getParkName() const { return parkName; }
 QString Customer::getState() const { return state; }
 int Customer::getVisitors() const { return visitors; }
-double Customer::getSize() const { return size;}
+double Customer::getAcres() const { return acres;}
 
