@@ -35,7 +35,7 @@ public:
    */
   Parks(QSqlQuery &query);
   Parks(const Parks &test);
-  Parks(QString parks, int rating);
+  Parks(QString parks, QString state, int visitors, double acres);
 
   /**
    * @brief Set the content of the Parks
@@ -43,20 +43,39 @@ public:
    */
   void setParks(QString newParks);
   /**
-   * @brief Set the rating of the Parks
-   * @param newRating the rating
+   * @brief Set the visitors of the Parks
+   * @param newvisitors the visitors
    */
-  void setRating(int newRating);
+
+  void setState(QString newState);
+  /**
+   * @brief Set the state of the Parks
+   * @param newState the parks
+   */
+
+
+  void setVisitors(int newVisitors);
   /**
    * @brief Get the content of the Parks
    * @return content of the Parks
    */
+
+   void setAcres(double newAcres);
+   /**
+    * @brief Get the acres of the Parks
+    * @return content of the Parks acres
+    */
+
   QString getParks() const;
   /**
-   * @brief Get the rating of the Parks
-   * @return rating of the Parks
+   * @brief Get the visitors of the Parks
+   * @return visitors of the Parks
    */
-  int getRating() const;
+
+  QString getState() const;
+
+
+  int getvisitors() const;
   /**
    * If the Parks was already in the database, then the Parks will
    * be update. If the Parks isn't in the database, then the Parks
@@ -66,11 +85,16 @@ public:
    * @return if the Parks was successfully saved in the database
    *
    */
+
+  double getAcres() const;
+
   bool save();
 
 private:
   QString parks; // The Parks text
-  int rating;    // Numerical rating of iRobot products
+  QString state;
+  int visitors;  //
+  double acres;
 };
 
 

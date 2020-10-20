@@ -3,31 +3,48 @@
 // Constructor
 Parks::Parks() {
   parks = "";
-  rating = -1;
+  state = "";
+  visitors = 0;
+  acres = 0;
 }
 
 // Destructor
 Parks::Parks(const Parks &test) {
   parks = test.parks;
-  rating = test.rating;
+  state = test.state;
+  visitors = test.visitors;
+  acres = test.acres;
 }
 
 Parks::Parks(QSqlQuery &query) {
   parks = query.value(1).toString();
-  rating = query.value(2).toInt();
+  state = query.value(2).toString();
+  visitors = query.value(3).toInt();
+  acres = query.value(4).toDouble();
 }
 
 QString Parks::getParks() const { return parks; }
 
-int Parks::getRating() const { return rating; }
+QString Parks::getState() const { return state; }
+
+int Parks::getvisitors() const { return visitors; }
+
+double Parks::getAcres() const { return acres; }
 
 void Parks::setParks(QString newParks) {
   parks = newParks;
 }
-void Parks::setRating(int newRating) { rating = newRating; }
 
-Parks::Parks(QString parks, int rating)
-    : parks(parks), rating(rating) {}
+void Parks::setState(QString newState) {
+  state = newState;
+}
+
+void Parks::setVisitors(int newVisitors) { visitors = newVisitors; }
+
+void Parks::setAcres(double newAcres) { acres = newAcres; }
+
+Parks::Parks(QString parks, QString state, int visitors, double acres)
+    : parks(parks), state(state), visitors(visitors), acres(acres) {}
 
 Parks::~Parks() {}
 
@@ -36,14 +53,16 @@ bool Parks::save() {
   QSqlQuery query;
 
   query.prepare("INSERT INTO parks "
-                "(parks, rating)"
-                "VALUES (?, ?)");
+                "(park_name, state, visitor, acres)"
+                "VALUES (?, ?, ?, ?)");
   query.addBindValue(parks);
-  query.addBindValue(rating);
+  query.addBindValue(state);
+  query.addBindValue(visitors);
+  query.addBindValue(acres);
 
   // If save Parks did not execute
   if (!query.exec()) {
-    qDebug() << "Failed to save Parkss: " << query.lastError().text();
+    qDebug() << "Failed to save Parks: " << query.lastError().text();
     return false;
   }
 
