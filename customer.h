@@ -29,7 +29,7 @@ public:
     /*!
    * \brief Default Constructor Customer
    */
-  Customer();
+
 
   /*!
    * \brief Customer constructor

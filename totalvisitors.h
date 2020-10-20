@@ -24,9 +24,6 @@ public:
     * \param parent
     */
 
-     * \brief totalVisitors
-     * \param parent
-     */
 
     explicit totalVisitors(QWidget *parent = nullptr);
     ~totalVisitors();
@@ -40,11 +37,7 @@ private:
     * the UI of the totalVisitors class.
     */
 
-     * \brief ui
-     *
-     * Private member variable to point to
-     * the UI of the totalVisitors class.
-     */
+
 
     Ui::totalVisitors *ui;
 };

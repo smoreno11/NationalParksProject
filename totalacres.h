@@ -25,9 +25,6 @@ public:
     * \param parent
     */
 
-     * \brief totalAcres
-     * \param parent
-     */
 
     explicit totalAcres(QWidget *parent = nullptr);
     ~totalAcres();
@@ -41,11 +38,6 @@ private:
     * of the totalAcres class.
     */
 
-     * \brief ui
-     *
-     * Private member variable to point to the UI
-     * of the totalAcres class.
-     */
 
     Ui::totalAcres *ui;
 };

@@ -40,15 +40,6 @@ private slots:
 
 
 
-    /*!
-     * \brief on_cancelButton_clicked
-     *
-     * This member function will perform an action
-     * when the cancel button is clicked.
-     */
-    void on_cancelButton_clicked();
-
-
 private:
     /*!
      * \brief ui

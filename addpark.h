@@ -17,9 +17,6 @@ public:
     explicit addPark(QWidget *parent = nullptr);
     ~addPark();
 
-    // Get temporary parks info
-    //Customer getTempParks();
-
     // Get if customer was successfully added to parks list
     bool getSuccessful();
 
