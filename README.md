@@ -1,3 +1,34 @@
+SCRUM WORKING AGREEMENT – C+US
+“We rise by lifting others.”  
+– Robert Ingersol
+1.   Stand-Up Meetings
+· 	Round-robin discussion of key points:
+o  What are you working on today?
+o  What are you having trouble with?
+o  What is your ETC (estimated time of completion)?
+
+2.   Caution/Concerns
+· 	Flag your responsibilities with “Caution” on the current project GITHUB if you are struggling so our team can act accordingly.
+· 	If you are taking a vacation or not going to be near a computer, please let the team know ahead of time so they can plan accordingly.
+
+
+3.   Update Sprint Objectives
+· 	It is everyone’s responsibility to keep the GITHUB Sprint objectives updated, so please do so whenever you can.
+4.   Testing
+· 	If anyone has extra time to do QA (quality assurance) testing or UAT (user acceptance testing), please notify our team each week if you will be available.
+5.   Clarity & Success Criteria
+· 	When it is unclear what the success criteria are for a particular task, do not hesitate to discuss with our team to adequately define the goal and agree on a deadline.
+6.   Communication
+· 	Please let the team know if you need anything regarding your completion of your responsibilities; don’t be afraid to ask for help.
+· 	Respect one another’s need not to be disturbed 24/7, and keep pings to a minimum.
+
+Signatures (Digital):
+Max: Maximillian Kalb
+Karson: Karson Lant
+Newsha: Newsha Niazmandi
+Saul: Saul Moreno
+
+
 CODING STANDARDS
 
 Throughout your code there should be short comment boxes explaining calculations done
